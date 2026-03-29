@@ -5,8 +5,8 @@
     <meta name="google-site-verification" content="LZ7Sf184T6la1KtwiOaiF8tmZs4Tp9Citj4S0YBVUx4" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Tanay Anand — CS & CSE student at RPI. ML systems, embedded firmware, distributed infrastructure.">
+    <meta name="author" content="Tanay Anand">
 
     <title>Tanay Anand</title>
 
@@ -14,8 +14,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
@@ -23,13 +22,347 @@
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
 
+    <style>
+      /* ── Modern Override Layer ── */
+      :root {
+        --accent: #4F46E5;
+        --accent-light: #818CF8;
+        --accent-bg: #EEF2FF;
+        --sidebar-bg: #1E1B4B;
+        --sidebar-text: rgba(255,255,255,.85);
+        --heading: #111827;
+        --body-text: #374151;
+        --muted: #6B7280;
+        --card-border: #E5E7EB;
+        --card-hover: #F9FAFB;
+        --section-bg-alt: #F9FAFB;
+        --radius: 12px;
+        --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+        --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+        --transition: .25s cubic-bezier(.4,0,.2,1);
+      }
+
+      /* ── Base ── */
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        color: var(--body-text) !important;
+        background: #fff;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+        color: var(--heading) !important;
+      }
+
+      h1 { font-size: 4.5rem !important; line-height: 1.1 !important; letter-spacing: -.02em; }
+      h2 { font-size: 2.4rem !important; letter-spacing: -.01em; }
+      h3 { font-size: 1.35rem !important; text-transform: none !important; }
+
+      .subheading {
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+        font-size: 1.05rem !important;
+        text-transform: none !important;
+        color: var(--muted) !important;
+        letter-spacing: .01em;
+      }
+
+      a { color: var(--accent) !important; transition: color var(--transition); }
+      a:hover { color: var(--accent-light) !important; }
+
+      .text-primary { color: var(--accent) !important; }
+      .bg-primary { background-color: var(--sidebar-bg) !important; }
+
+      /* ── Sidebar ── */
+      #sideNav {
+        background: var(--sidebar-bg) !important;
+      }
+      #sideNav .navbar-brand .img-profile {
+        border: 4px solid rgba(255,255,255,.15) !important;
+        box-shadow: 0 0 30px rgba(79,70,229,.3);
+      }
+      #sideNav .navbar-nav .nav-item .nav-link {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: .85rem;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        color: var(--sidebar-text);
+        padding: .6rem 1.5rem;
+        border-left: 3px solid transparent;
+        transition: all var(--transition);
+      }
+      #sideNav .navbar-nav .nav-item .nav-link:hover,
+      #sideNav .navbar-nav .nav-item .nav-link.active {
+        color: #fff;
+        border-left-color: var(--accent-light);
+        background: rgba(255,255,255,.05);
+      }
+
+      /* ── Sections ── */
+      section.resume-section {
+        border-bottom: 1px solid var(--card-border) !important;
+      }
+      .section-alt {
+        background: var(--section-bg-alt);
+      }
+
+      /* ── Section Headers ── */
+      .section-header {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 2.5rem;
+      }
+      .section-header::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 48px;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 2px;
+      }
+
+      /* ── About Section ── */
+      .about-intro {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        max-width: 640px;
+        color: var(--body-text);
+      }
+      .about-email {
+        font-size: 1rem;
+        color: var(--muted) !important;
+        font-weight: 400;
+      }
+      .about-email:hover {
+        color: var(--accent) !important;
+      }
+
+      /* ── Social Icons ── */
+      .social-modern a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--accent-bg);
+        color: var(--accent) !important;
+        font-size: 1.15rem;
+        transition: all var(--transition);
+        margin-right: 10px;
+      }
+      .social-modern a:hover {
+        background: var(--accent);
+        color: #fff !important;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+      .social-modern a i {
+        color: inherit !important;
+      }
+
+      /* ── Experience Items ── */
+      .exp-card {
+        border-left: 3px solid var(--accent);
+        padding-left: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+      .exp-card h3 {
+        margin-bottom: .25rem !important;
+      }
+      .exp-company {
+        font-weight: 500;
+        color: var(--muted);
+        font-size: .95rem;
+        margin-bottom: .5rem;
+      }
+      .exp-date {
+        display: inline-block;
+        background: var(--accent-bg);
+        color: var(--accent);
+        font-size: .8rem;
+        font-weight: 600;
+        padding: 3px 12px;
+        border-radius: 20px;
+        margin-bottom: .75rem;
+      }
+      .exp-card ul {
+        padding-left: 1.1rem;
+        margin: 0;
+      }
+      .exp-card ul li {
+        margin-bottom: .4rem;
+        font-size: .92rem;
+        line-height: 1.6;
+        color: var(--body-text);
+      }
+
+      /* ── Education ── */
+      .edu-card {
+        background: #fff;
+        border: 1px solid var(--card-border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        margin-bottom: 1.25rem;
+        transition: all var(--transition);
+      }
+      .edu-card:hover {
+        box-shadow: var(--shadow-md);
+        border-color: var(--accent-light);
+      }
+      .edu-card h3 {
+        margin-bottom: .25rem !important;
+      }
+      .edu-meta {
+        font-size: .85rem;
+        color: var(--muted);
+      }
+      .edu-gpa {
+        display: inline-block;
+        background: #ECFDF5;
+        color: #059669;
+        font-size: .8rem;
+        font-weight: 600;
+        padding: 2px 10px;
+        border-radius: 20px;
+        margin-top: .25rem;
+      }
+      .edu-coursework {
+        font-size: .88rem;
+        color: var(--muted);
+        line-height: 1.7;
+        margin-top: .5rem;
+      }
+
+      /* ── Skills ── */
+      .skill-group {
+        margin-bottom: 1.75rem;
+      }
+      .skill-group-title {
+        font-family: 'Space Grotesk', sans-serif !important;
+        font-size: .85rem !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: .08em;
+        color: var(--accent) !important;
+        margin-bottom: .75rem;
+      }
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .skill-tag {
+        display: inline-block;
+        background: var(--accent-bg);
+        color: var(--accent);
+        font-size: .82rem;
+        font-weight: 500;
+        padding: 6px 14px;
+        border-radius: 8px;
+        transition: all var(--transition);
+      }
+      .skill-tag:hover {
+        background: var(--accent);
+        color: #fff;
+        transform: translateY(-1px);
+      }
+
+      /* ── Projects ── */
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 1.5rem;
+      }
+      .project-card {
+        background: #fff;
+        border: 1px solid var(--card-border);
+        border-radius: var(--radius);
+        padding: 1.75rem;
+        transition: all var(--transition);
+        display: flex;
+        flex-direction: column;
+      }
+      .project-card:hover {
+        border-color: var(--accent-light);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-3px);
+      }
+      .project-card h3 {
+        font-size: 1.15rem !important;
+        margin-bottom: .5rem !important;
+      }
+      .project-badge {
+        display: inline-block;
+        background: #FEF3C7;
+        color: #B45309;
+        font-size: .7rem;
+        font-weight: 600;
+        padding: 2px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        margin-bottom: .75rem;
+      }
+      .project-card p {
+        font-size: .9rem;
+        line-height: 1.65;
+        color: var(--body-text);
+        flex-grow: 1;
+      }
+      .project-links {
+        display: flex;
+        gap: 10px;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--card-border);
+      }
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: .82rem;
+        font-weight: 600;
+        color: var(--accent) !important;
+        text-decoration: none !important;
+        padding: 5px 12px;
+        border-radius: 6px;
+        background: var(--accent-bg);
+        transition: all var(--transition);
+      }
+      .project-link:hover {
+        background: var(--accent);
+        color: #fff !important;
+      }
+
+      /* ── Fade-in Animation ── */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity .6s ease, transform .6s ease;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 767px) {
+        h1 { font-size: 3rem !important; }
+        h2 { font-size: 1.8rem !important; }
+        .project-grid { grid-template-columns: 1fr; }
+      }
+    </style>
   </head>
 
   <body id="page-top">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-block d-lg-none">Tanay Anand</span>
         <span class="d-none d-lg-block">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/Headshot.jpg" alt="">
         </span>
@@ -43,7 +376,7 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Resume</a>
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#education">Education</a>
@@ -54,281 +387,231 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Testimonials</a>
-          </li>
         </ul>
       </div>
     </nav>
 
     <div class="container-fluid p-0">
 
+      <!-- ── ABOUT ── -->
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="my-auto">
           <h1 class="mb-0">Tanay
             <span class="text-primary">Anand</span>
           </h1>
-          <div class="subheading mb-5">
-            <a href="mailto:tanayanand27@gmail.com">tanayanand27@gmail.com</a>
+          <div class="mb-4" style="margin-top:.5rem">
+            <a class="about-email" href="mailto:tanayanand27@gmail.com">tanayanand27@gmail.com</a>
           </div>
-          <p class="mb-5">I am a mentor and STEM Enthusiast, fluent in C/C++, Java, and AI/ML applications with Python.<!--I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.--></p>
-          <ul class="list-inline list-social-icons mb-0">
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/tanayanand/">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://github.com/OrangeTangy">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
+          <p class="about-intro mb-4">Computer Science and Computer Systems Engineering student at Rensselaer Polytechnic Institute. I work across ML systems, embedded firmware, and distributed infrastructure, with experience in Python, C++, C, Rust, and Java. Currently focused on kernel optimization research and building tools that bridge hardware and software.</p>
+          <div class="social-modern mb-0">
+            <a href="https://www.linkedin.com/in/tanayanand/" aria-label="LinkedIn">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/OrangeTangy" aria-label="GitHub">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="mailto:tanayanand27@gmail.com" aria-label="Email">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+      <!-- ── EXPERIENCE ── -->
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column section-alt" id="experience">
         <div class="my-auto">
-          <h2 class="mb-5">Resume</h2>
+          <h2 class="section-header">Experience</h2>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Data Science/Analytics Internship</h3>
-              <div class="subheading mb-3">Cisco</div>
-              <p>Shadowed current Data Science/Analytics employees, and observed how data and pipelines are used at larger companies. Used what I learned to complete a capstone project with a group, using data to create safer railways.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">June - July 2022</span>
-            </div>
+          <div class="exp-card fade-up">
+            <h3>Software Engineering Intern</h3>
+            <div class="exp-company">Cisco Systems &mdash; San Jose, CA</div>
+            <span class="exp-date">Summer 2022</span>
+            <ul>
+              <li>Built Python and Java tools to analyze distributed telemetry across 15+ networking services, reducing debugging time for production incidents by 40%.</li>
+              <li>Implemented validation modules that processed 10M+ telemetry events to detect inconsistencies in system state and network metrics.</li>
+              <li>Traced execution paths across distributed services to isolate software defects and verify intermediate computation stages.</li>
+              <li>Developed automated test pipelines to validate telemetry processing logic and improve reliability of internal monitoring infrastructure.</li>
+            </ul>
           </div>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">President Of Game Development Club</h3>
-              <div class="subheading mb-3">Irvington High School</div>
-              <p>Introduced members to concepts in Unity, C#, Blender and other game dev tools. Have over 30 concurrent members, host monthly Game Jams and other competitions.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">March 2020 - 2022</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Web Development Mentor</h3>
-              <div class="subheading mb-3">Shooting Stars Foundation</div>
-              <p>Teach over 600 students total, the concepts of Web Development through a series of crash-courses (10+ sets of classes around 4 months every year), starting with fundamentals (tags, elements) moving in to more advanced concepts(creating shadows and animations with CSS) </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">November 2019 - 2023</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Hackathon Tech Mentor & Producer</h3>
-              <div class="subheading mb-3">AMGEN, NetScout, and other StarHacks hosted Hackathons</div>
-              <p>Helped teams ranging from 5-10 members with any technical bugs/issues they had trouble solving when creating their product for the Hackathon, fixed bugs ranging from languages ranging from flutter/react-native to HTML/CSS/JS</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">June 2019 - 2022</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Computer Science Tutor</h3>
-              <div class="subheading mb-3">TheCoderSchool</div>
-              <p>Taught students languages like Java, C#, and Python, prepared them for the AP Comp-Sci Test, and had them, create projects for their portfolio. </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">August 2022-June 2023</span>
-            </div>
-          </div>
-
-
-          
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Alto Saxaphonist (Jazz)</h3>
-              <div class="subheading mb-3">Gregory's Big Band, Horner Junior High, Irvington High</div>
-              <p>Avid Alto Saxophonist for the past 7 years, tutored over 700 students ranging from 5th to 8th grade, part of over 5 different Jazz Bands, YouTube videos with over 1000 views.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">August 2013 - Present</span>
-            </div>
+          <div class="exp-card fade-up">
+            <h3>Software Developer and Instructor</h3>
+            <div class="exp-company">TheCoderSchool &mdash; Remote</div>
+            <span class="exp-date">2022 &ndash; Present</span>
+            <ul>
+              <li>Developed a PyTorch-based notes assistant that processed 5K+ documents, improving model accuracy by 20% through data preprocessing and validation workflows.</li>
+              <li>Built testing utilities to verify ML data pipelines, catch data handling issues, and improve reproducibility of model inference behavior.</li>
+              <li>Investigated runtime and memory-related failures in model execution, resolving edge cases in data loading and preprocessing.</li>
+              <li>Taught Python, Java, and C to 50+ students, with emphasis on software design, algorithmic thinking, and systematic debugging.</li>
+            </ul>
           </div>
 
         </div>
-
       </section>
-      
 
+      <!-- ── EDUCATION ── -->
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
         <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
+          <h2 class="section-header">Education</h2>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Carnegie Mellon Pre-College Program</h3>
-              <div class="subheading mb-3">National High School Game Development Academy (<a href="https://www.cmu.edu/pre-college/academic-programs/game-academy.html">NHSGA</a>)</div>
-              <div>Programmer (Unity C#), Developer &AMP; Audio Engineer</div>
-              <p></p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">June 2021 - August 2021</span>
+          <div class="edu-card fade-up">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-start">
+              <div>
+                <h3>Rensselaer Polytechnic Institute</h3>
+                <div class="subheading">B.S. in Computer Science and Computer Systems Engineering</div>
+                <span class="edu-gpa">GPA: 3.91 / 4.00</span>
+                <p class="edu-coursework">Machine Learning, Operating Systems, Distributed Systems, Computer Networks, Data Structures &amp; Algorithms, Parallel Computing, Embedded Control, Computer Architecture</p>
+              </div>
+              <span class="exp-date" style="white-space:nowrap;margin-top:.25rem">Aug 2023 &ndash; Dec 2026</span>
             </div>
           </div>
 
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Rensselaer Polytechnic Institute</h3>
-              <div class="subheading mb-3">Computer Science and Computer Systems Engineering</div>
-              <p>Current Classes: Linear Algebra, Advanced Algorithms, Electric Circuits, Thermodynamics</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">August 2023 - Present</span>
+          <div class="edu-card fade-up">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-start">
+              <div>
+                <h3>Carnegie Mellon Pre-College Program</h3>
+                <div class="subheading">National High School Game Development Academy (<a href="https://www.cmu.edu/pre-college/academic-programs/game-academy.html">NHSGA</a>)</div>
+                <p class="edu-meta" style="margin-top:.25rem">Programmer (Unity C#), Developer &amp; Audio Engineer</p>
+              </div>
+              <span class="exp-date" style="white-space:nowrap;margin-top:.25rem">Jun &ndash; Aug 2021</span>
             </div>
           </div>
 
         </div>
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+      <!-- ── SKILLS ── -->
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column section-alt" id="skills">
         <div class="my-auto">
-          <h2 class="mb-5">Skills</h2>
+          <h2 class="section-header">Skills</h2>
 
-          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-          <ul class="list-inline list-icons">
-            <li class="list-inline-item">
-              <i class="devicons devicons-html5"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-css3"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-javascript"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-c++"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-java"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-unity_small"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-react"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-dart"></i>
-            </li>
-          </ul>
+          <div class="skill-group fade-up">
+            <div class="skill-group-title">Languages</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">Rust</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
 
-          
+          <div class="skill-group fade-up">
+            <div class="skill-group-title">ML &amp; Numerical Computing</div>
+            <div class="skill-tags">
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">Model Evaluation</span>
+              <span class="skill-tag">Preprocessing</span>
+              <span class="skill-tag">Inference Validation</span>
+              <span class="skill-tag">Tensor Operations</span>
+              <span class="skill-tag">Performance Benchmarking</span>
+            </div>
+          </div>
 
-          <div class="subheading mb-3">Fluency</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              6+ years in C/C++</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              5+ years in Java/JavaScript &amp; HTML/CSS</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              4+ years in C# Unity Game Development</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              8+ years of Computer Science Knowledge</li>
-          </ul>
+          <div class="skill-group fade-up">
+            <div class="skill-group-title">Systems &amp; Software</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Data Structures</span>
+              <span class="skill-tag">Algorithms</span>
+              <span class="skill-tag">OOP</span>
+              <span class="skill-tag">Automated Testing</span>
+              <span class="skill-tag">Profiling</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="skill-group fade-up">
+            <div class="skill-group-title">Embedded &amp; Hardware-Adjacent</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Microcontrollers</span>
+              <span class="skill-tag">GPIO</span>
+              <span class="skill-tag">Interrupts</span>
+              <span class="skill-tag">Finite State Machines</span>
+              <span class="skill-tag">Real-Time Control</span>
+              <span class="skill-tag">HW/SW Integration</span>
+            </div>
+          </div>
+
         </div>
       </section>
 
+      <!-- ── PROJECTS ── -->
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-  <div class="my-auto">
-    <h2 class="mb-5">Projects</h2>
+        <div class="my-auto">
+          <h2 class="section-header">Projects</h2>
 
-    <div class="mb-5">
-      <h3 class="mb-2">
-        Transformer Scaling Explainer
-      </h3>
-      <p>
-        An interactive visual tool that models Transformer inference scaling. 
-        Users can adjust layers, sequence length, precision, and hardware 
-        parameters to see how latency, attention cost, and KV cache memory change 
-        in real time.
-      </p>
+          <div class="project-grid">
 
-      <p>
-        The tool separates compute vs memory time and highlights when a model 
-        becomes memory bound or compute bound, demonstrating hardware-aware 
-        reasoning for AI accelerator design.
-      </p>
+            <div class="project-card fade-up">
+              <h3>Transformer Scaling Explainer</h3>
+              <p>
+                An interactive visual tool that models Transformer inference scaling.
+                Adjust layers, sequence length, precision, and hardware parameters to see
+                how latency, attention cost, and KV cache memory change in real time.
+                Highlights compute-bound vs memory-bound transitions for hardware-aware AI design.
+              </p>
+              <div class="project-links">
+                <a class="project-link" href="https://transformer-optimizer.vercel.app/" target="_blank">
+                  <i class="fa fa-external-link"></i> Live Demo
+                </a>
+                <a class="project-link" href="https://github.com/OrangeTangy/transformer_optimizer" target="_blank">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
 
-      <p>
-        <a href="https://transformer-optimizer.vercel.app/" target="_blank">
-          Live Demo
-        </a> |
-        <a href="https://github.com/OrangeTangy/transformer_optimizer" target="_blank">
-          GitHub
-        </a>
-      </p>
-    </div>
+            <div class="project-card fade-up">
+              <h3>Neural Networks &amp; LLM Visualizer</h3>
+              <p>
+                An interactive tool that breaks down how large language models process text.
+                Explore tokenization, attention patterns, and internal representations to
+                understand how transformers interpret and generate language, with real-time visual feedback.
+              </p>
+              <div class="project-links">
+                <a class="project-link" href="https://neural-lens-seven.vercel.app/" target="_blank">
+                  <i class="fa fa-external-link"></i> Live Demo
+                </a>
+                <a class="project-link" href="https://github.com/OrangeTangy/NeuralLens" target="_blank">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
 
+            <div class="project-card fade-up">
+              <span class="project-badge">Undergraduate Research</span>
+              <h3>Neural Network Kernel Optimization Study</h3>
+              <p>
+                Benchmarked matrix multiplication and convolution kernels across CPU and GPU workloads.
+                Improved training runtime by up to 35% by identifying memory access bottlenecks.
+                Built profiling scripts to measure execution time, memory utilization, and numerical correctness.
+              </p>
+            </div>
 
+            <div class="project-card fade-up">
+              <h3>Embedded Robotics Control System</h3>
+              <p>
+                Developed embedded C firmware for a microcontroller-based robotics platform using
+                timers, interrupts, GPIO, and event-driven state management. Implemented FSM control
+                logic for sensor-driven behavior with real-time input handling on constrained hardware.
+              </p>
+            </div>
 
-    <div class="mb-5">
-      <h3 class="mb-2">
-        Neural Networks and LLM Visualizer
-      </h3>
-      <p>
-        An interactive visual tool that breaks down how large language models process text. 
-        Users can explore tokenization, attention patterns, and internal representations to 
-        better understand how transformers interpret and generate language. 
-      </p>
+            <div class="project-card fade-up">
+              <h3>Telemetry Validation &amp; Analysis Toolkit</h3>
+              <p>
+                Python toolkit to parse, validate, and analyze structured system logs for large-scale
+                service debugging. Automated checks for malformed records and inconsistent state
+                transitions, designed for modular extension across new datasets and workflows.
+              </p>
+            </div>
 
-      <p>
-        The project 
-        focuses on making complex model behavior intuitive through real time visual feedback.
-      </p>
-      </p>
-
-      <p>
-        <a href="https://neural-lens-seven.vercel.app/" target="_blank">
-          Live Demo
-        </a> |
-        <a href="https://github.com/OrangeTangy/NeuralLens" target="_blank">
-          GitHub
-        </a>
-      </p>
-    </div>
-
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
     </div>
 
@@ -341,6 +624,26 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
+
+    <!-- Fade-in on scroll -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var els = document.querySelectorAll('.fade-up');
+        if ('IntersectionObserver' in window) {
+          var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                obs.unobserve(e.target);
+              }
+            });
+          }, { threshold: 0.15 });
+          els.forEach(function (el) { obs.observe(el); });
+        } else {
+          els.forEach(function (el) { el.classList.add('visible'); });
+        }
+      });
+    </script>
 
   </body>
 
