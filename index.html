@@ -271,7 +271,7 @@
     }
 
     /* ── Experience ── */
-    .exp-list { display: flex; flex-direction: column; gap: 2rem; }
+    .exp-list { display: flex; flex-direction: column; gap: 1.5rem; }
 
     .exp-card {
       background: var(--bg-card);
@@ -286,12 +286,38 @@
       box-shadow: 0 4px 24px rgba(0,0,0,.2);
     }
 
+    /* Featured card (Cisco) */
+    .exp-card.featured {
+      border-color: rgba(96,165,250,.2);
+      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(96,165,250,.04) 100%);
+    }
+
+    .exp-card.featured:hover {
+      border-color: rgba(96,165,250,.35);
+      box-shadow: 0 4px 30px rgba(96,165,250,.08);
+    }
+
     .exp-header {
       display: flex;
       justify-content: space-between;
       align-items: start;
       margin-bottom: 1rem;
       gap: 1rem;
+    }
+
+    .exp-header-left {
+      display: flex;
+      align-items: start;
+      gap: 1rem;
+    }
+
+    .exp-logo {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+      margin-top: 2px;
     }
 
     .exp-role {
@@ -671,27 +697,40 @@
       <h2 class="section-title reveal">Where I've Worked</h2>
 
       <div class="exp-list">
-        <div class="exp-card reveal">
+
+        <!-- Cisco — Featured -->
+        <div class="exp-card featured reveal">
           <div class="exp-header">
-            <div>
-              <div class="exp-role">Teaching Assistant &mdash; Embedded Control</div>
-              <div class="exp-company">Rensselaer Polytechnic Institute &mdash; Troy, NY</div>
+            <div class="exp-header-left">
+              <div class="exp-logo" style="background:rgba(4,156,219,.12);color:#049cdb">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="8" width="2" height="8" rx="1" fill="currentColor"/><rect x="7" y="5" width="2" height="14" rx="1" fill="currentColor"/><rect x="11" y="3" width="2" height="18" rx="1" fill="currentColor"/><rect x="15" y="5" width="2" height="14" rx="1" fill="currentColor"/><rect x="19" y="8" width="2" height="8" rx="1" fill="currentColor"/></svg>
+              </div>
+              <div>
+                <div class="exp-role">Software Engineering Intern</div>
+                <div class="exp-company">Cisco Systems &mdash; San Jose, CA</div>
+              </div>
             </div>
-            <span class="exp-date">Spring 2025</span>
+            <span class="exp-date">Summer 2022</span>
           </div>
           <ul class="exp-bullets">
-            <li>TA for the undergraduate Embedded Control course covering microcontroller programming, interrupt-driven I/O, real-time scheduling, and hardware-software co-design.</li>
-            <li>Held office hours and lab sessions guiding 60+ students through hands-on firmware development on ARM-based platforms using C, GPIO, timers, and finite state machines.</li>
-            <li>Designed and graded lab assignments involving sensor integration, motor control, and real-time event handling on resource-constrained hardware.</li>
-            <li>Debugged student hardware setups and firmware, troubleshooting issues across serial communication, interrupt priority conflicts, and timing-sensitive control loops.</li>
+            <li>Built Python and Java tools to analyze distributed telemetry across 15+ networking services, reducing debugging time for production incidents by 40%.</li>
+            <li>Implemented validation modules that processed 10M+ telemetry events to detect inconsistencies in system state and network metrics.</li>
+            <li>Traced execution paths across distributed services to isolate software defects and verify intermediate computation stages.</li>
+            <li>Developed automated test pipelines to validate telemetry processing logic and improve reliability of internal monitoring infrastructure.</li>
           </ul>
         </div>
 
+        <!-- TheCoderSchool -->
         <div class="exp-card reveal">
           <div class="exp-header">
-            <div>
-              <div class="exp-role">Software Developer &amp; Instructor</div>
-              <div class="exp-company">TheCoderSchool &mdash; Remote</div>
+            <div class="exp-header-left">
+              <div class="exp-logo" style="background:var(--green-dim);color:var(--green)">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div>
+                <div class="exp-role">Software Developer &amp; Instructor</div>
+                <div class="exp-company">TheCoderSchool &mdash; Remote</div>
+              </div>
             </div>
             <span class="exp-date">2022 &mdash; Present</span>
           </div>
@@ -703,21 +742,28 @@
           </ul>
         </div>
 
+        <!-- RPI TA -->
         <div class="exp-card reveal">
           <div class="exp-header">
-            <div>
-              <div class="exp-role">Software Engineering Intern</div>
-              <div class="exp-company">Cisco Systems &mdash; San Jose, CA</div>
+            <div class="exp-header-left">
+              <div class="exp-logo" style="background:var(--rose-dim);color:var(--rose)">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <div>
+                <div class="exp-role">Teaching Assistant &mdash; Embedded Control</div>
+                <div class="exp-company">Rensselaer Polytechnic Institute &mdash; Troy, NY</div>
+              </div>
             </div>
-            <span class="exp-date">Summer 2022</span>
+            <span class="exp-date">Spring 2025</span>
           </div>
           <ul class="exp-bullets">
-            <li>Built Python and Java tools to analyze distributed telemetry across 15+ networking services, reducing debugging time for production incidents by 40%.</li>
-            <li>Implemented validation modules that processed 10M+ telemetry events to detect inconsistencies in system state and network metrics.</li>
-            <li>Traced execution paths across distributed services to isolate software defects and verify intermediate computation stages.</li>
-            <li>Developed automated test pipelines to validate telemetry processing logic and improve reliability of internal monitoring infrastructure.</li>
+            <li>TA for the undergraduate Embedded Control course covering microcontroller programming, interrupt-driven I/O, real-time scheduling, and hardware-software co-design.</li>
+            <li>Held office hours and lab sessions guiding 60+ students through hands-on firmware development on ARM-based platforms using C, GPIO, timers, and finite state machines.</li>
+            <li>Designed and graded lab assignments involving sensor integration, motor control, and real-time event handling on resource-constrained hardware.</li>
+            <li>Debugged student hardware setups and firmware, troubleshooting issues across serial communication, interrupt priority conflicts, and timing-sensitive control loops.</li>
           </ul>
         </div>
+
       </div>
     </section>
 
