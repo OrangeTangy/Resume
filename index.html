@@ -4,7 +4,7 @@
   <meta name="google-site-verification" content="LZ7Sf184T6la1KtwiOaiF8tmZs4Tp9Citj4S0YBVUx4" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tanay Anand — CS & CSE @ RPI. ML systems, embedded firmware, distributed infrastructure.">
+  <meta name="description" content="Tanay Anand — Student researcher and CS &amp; CSE student at RPI. RTL design, embedded firmware, and kernel optimization.">
   <title>Tanay Anand</title>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -667,9 +667,9 @@
           <div class="hero-overline">CS &amp; Computer Systems Engineering @ RPI</div>
           <h1 class="hero-name">Tanay Anand</h1>
           <p class="hero-tagline">
-            Building at the intersection of ML systems, embedded firmware, and
-            distributed infrastructure. Currently researching kernel optimization
-            for neural network workloads.
+            Student researcher focused on kernel optimization for neural network
+            workloads. Building hardware and embedded systems, from RTL design
+            and verification to firmware and controls.
           </p>
           <div class="hero-btns">
             <a class="btn btn-primary" href="mailto:tanayanand27@gmail.com">
@@ -888,7 +888,7 @@
     <!-- PROJECTS -->
     <section id="projects">
       <div class="section-label">Projects</div>
-      <h2 class="section-title reveal">Things I've Built</h2>
+      <h2 class="section-title reveal">Main Projects</h2>
 
       <div class="projects-grid">
 
@@ -909,97 +909,6 @@
           </div>
         </div>
 
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon" style="background:var(--green-dim);color:var(--green)">
-              <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-            </div>
-            <div class="project-ext-links">
-              <a href="https://github.com/OrangeTangy/computer-systems-lab/tree/main/project-1-simd" target="_blank" rel="noopener noreferrer" title="View SIMD Performance Lab on GitHub" aria-label="View SIMD Performance Lab on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-            </div>
-          </div>
-          <span class="project-badge b-systems">Computer Architecture</span>
-          <h3>SIMD Performance Lab</h3>
-          <p>Reproducible C experiments comparing scalar and SIMD kernels. Measures AXPY and dot-product performance across working-set sizes, with compiler evidence and correctness checks.</p>
-          <div class="project-tech">
-            <span>C</span><span>SIMD</span><span>GCC</span><span>Python</span>
-          </div>
-        </div>
-
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon" style="background:var(--green-dim);color:var(--green)">
-              <i class="fa-solid fa-memory" aria-hidden="true"></i>
-            </div>
-            <div class="project-ext-links">
-              <a href="https://github.com/OrangeTangy/computer-systems-lab/tree/main/project-2-memory" target="_blank" rel="noopener noreferrer" title="View Cache &amp; Memory Lab on GitHub" aria-label="View Cache &amp; Memory Lab on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-            </div>
-          </div>
-          <span class="project-badge b-systems">Memory Systems</span>
-          <h3>Cache &amp; Memory Lab</h3>
-          <p>Pointer-chasing and concurrent memory-traffic experiments exploring latency, contention, and page locality. Includes raw measurements, analysis scripts, and explanations of measurement limits.</p>
-          <div class="project-tech">
-            <span>C</span><span>Cache &amp; DRAM</span><span>Benchmarking</span><span>Python</span>
-          </div>
-        </div>
-
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon" style="background:var(--green-dim);color:var(--green)">
-              <i class="fa-solid fa-hard-drive" aria-hidden="true"></i>
-            </div>
-            <div class="project-ext-links">
-              <a href="https://github.com/OrangeTangy/computer-systems-lab/tree/main/project-3-ssd" target="_blank" rel="noopener noreferrer" title="View SSD Performance Lab on GitHub" aria-label="View SSD Performance Lab on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-            </div>
-          </div>
-          <span class="project-badge b-systems">Storage Systems</span>
-          <h3>SSD Performance Lab</h3>
-          <p>File-based fio experiments measuring storage throughput, IOPS, and latency across queue depths. Preserves configurations and raw results to make the measurements reproducible.</p>
-          <div class="project-tech">
-            <span>fio</span><span>Storage I/O</span><span>Python</span><span>Performance Analysis</span>
-          </div>
-        </div>
-
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon" style="background:var(--accent-dim);color:var(--accent)">
-              <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
-            </div>
-            <div class="project-ext-links">
-              <a href="https://github.com/OrangeTangy/hwbench" target="_blank" rel="noopener noreferrer" title="View hwbench: ML Inference Benchmarking on GitHub" aria-label="View hwbench: ML Inference Benchmarking on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-            </div>
-          </div>
-          <span class="project-badge b-ml">ML / Performance</span>
-          <h3>hwbench: ML Inference Benchmarking</h3>
-          <p>A reproducible inference benchmark harness with latency percentiles, throughput, memory metrics, and saved environment details. CPU backend is working; CUDA validation and TTNN integration remain in progress.</p>
-          <div class="project-tech">
-            <span>Python</span><span>PyTorch</span><span>CPU Inference</span><span>Benchmarking</span>
-          </div>
-        </div>
-
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon" style="background:var(--purple-dim);color:var(--purple)">
-              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-            </div>
-            <div class="project-ext-links">
-              <a href="https://github.com/OrangeTangy/tensix-field-guide" target="_blank" rel="noopener noreferrer" title="View Tensix Field Guide on GitHub" aria-label="View Tensix Field Guide on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-            </div>
-          </div>
-          <span class="project-badge b-research">Architecture / Learning</span>
-          <h3>Tensix Field Guide</h3>
-          <p>A work-in-progress guide to Tenstorrent’s processor architecture, covering compute cores, local memory, data movement, and tiled execution. Connects plain-language explanations to primary technical sources.</p>
-          <div class="project-tech">
-            <span>Computer Architecture</span><span>Tensix</span><span>Technical Writing</span>
-          </div>
-        </div>
-
-
         <div class="project-card reveal">
           <div class="project-top">
             <div class="project-icon" style="background:var(--amber-dim);color:var(--amber)">
@@ -1016,7 +925,6 @@
             <span>Python</span><span>YOLO</span><span>ONNX</span><span>Raspberry Pi</span>
           </div>
         </div>
-
 
         <div class="project-card reveal">
           <div class="project-top">
@@ -1035,7 +943,6 @@
           </div>
         </div>
 
-
         <div class="project-card reveal">
           <div class="project-top">
             <div class="project-icon" style="background:var(--purple-dim);color:var(--purple)">
@@ -1053,6 +960,100 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="other-projects">
+      <div class="section-label">More to Explore</div>
+      <h2 class="section-title reveal">Some Other Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--green-dim);color:var(--green)">
+              <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/computer-systems-lab/tree/main/project-1-simd" target="_blank" rel="noopener noreferrer" title="View SIMD Performance Lab on GitHub" aria-label="View SIMD Performance Lab on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-systems">Computer Architecture</span>
+          <h3>SIMD Performance Lab</h3>
+          <p>Reproducible C experiments comparing scalar and SIMD kernels. Measures AXPY and dot-product performance across working-set sizes, with compiler evidence and correctness checks.</p>
+          <div class="project-tech">
+            <span>C</span><span>SIMD</span><span>GCC</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--green-dim);color:var(--green)">
+              <i class="fa-solid fa-memory" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/computer-systems-lab/tree/main/project-2-memory" target="_blank" rel="noopener noreferrer" title="View Cache &amp; Memory Lab on GitHub" aria-label="View Cache &amp; Memory Lab on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-systems">Memory Systems</span>
+          <h3>Cache &amp; Memory Lab</h3>
+          <p>Pointer-chasing and concurrent memory-traffic experiments exploring latency, contention, and page locality. Includes raw measurements, analysis scripts, and explanations of measurement limits.</p>
+          <div class="project-tech">
+            <span>C</span><span>Cache &amp; DRAM</span><span>Benchmarking</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--green-dim);color:var(--green)">
+              <i class="fa-solid fa-hard-drive" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/computer-systems-lab/tree/main/project-3-ssd" target="_blank" rel="noopener noreferrer" title="View SSD Performance Lab on GitHub" aria-label="View SSD Performance Lab on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-systems">Storage Systems</span>
+          <h3>SSD Performance Lab</h3>
+          <p>File-based fio experiments measuring storage throughput, IOPS, and latency across queue depths. Preserves configurations and raw results to make the measurements reproducible.</p>
+          <div class="project-tech">
+            <span>fio</span><span>Storage I/O</span><span>Python</span><span>Performance Analysis</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--accent-dim);color:var(--accent)">
+              <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/hwbench" target="_blank" rel="noopener noreferrer" title="View hwbench: ML Inference Benchmarking on GitHub" aria-label="View hwbench: ML Inference Benchmarking on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-ml">ML / Performance</span>
+          <h3>hwbench: ML Inference Benchmarking</h3>
+          <p>A reproducible inference benchmark harness with latency percentiles, throughput, memory metrics, and saved environment details. CPU backend is working; CUDA validation and TTNN integration remain in progress.</p>
+          <div class="project-tech">
+            <span>Python</span><span>PyTorch</span><span>CPU Inference</span><span>Benchmarking</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--purple-dim);color:var(--purple)">
+              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/tensix-field-guide" target="_blank" rel="noopener noreferrer" title="View Tensix Field Guide on GitHub" aria-label="View Tensix Field Guide on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-research">Architecture / Learning</span>
+          <h3>Tensix Field Guide</h3>
+          <p>A work-in-progress guide to Tenstorrent’s processor architecture, covering compute cores, local memory, data movement, and tiled execution. Connects plain-language explanations to primary technical sources.</p>
+          <div class="project-tech">
+            <span>Computer Architecture</span><span>Tensix</span><span>Technical Writing</span>
+          </div>
+        </div>
 
         <div class="project-card reveal">
           <div class="project-top">
@@ -1070,7 +1071,6 @@
             <span>TypeScript</span><span>React</span><span>Node.js</span><span>Socket.IO</span>
           </div>
         </div>
-
 
         <div class="project-card reveal">
           <div class="project-top">
@@ -1126,7 +1126,6 @@
           </div>
         </div>
 
-
         <div class="project-card reveal">
           <div class="project-top">
             <div class="project-icon" style="background:var(--accent-dim);color:var(--accent)">
@@ -1143,8 +1142,6 @@
             <span>Claude Code</span><span>Verilog</span><span>Python</span><span>Automation</span>
           </div>
         </div>
-
-        
 
         <div class="project-card reveal">
           <div class="project-top">
@@ -1229,8 +1226,6 @@
             <span>C</span><span>Linux</span><span>mmap</span><span>Valgrind</span>
           </div>
         </div>
-
-        
 
       </div>
     </section>
