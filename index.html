@@ -875,6 +875,186 @@
 
         <div class="project-card reveal">
           <div class="project-top">
+            <div class="project-icon" style="background:var(--amber-dim);color:var(--amber)">
+              <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/RVTensor" target="_blank" rel="noopener noreferrer" title="View RVTensor: RISC-V Tensor Accelerator on GitHub" aria-label="View RVTensor: RISC-V Tensor Accelerator on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-embedded">RTL / Verification</span>
+          <h3>RVTensor: RISC-V Tensor Accelerator</h3>
+          <p>SystemVerilog SoC with an RV32I control core, 4×4 systolic array, scratchpad SRAM, and DMA. Includes a tensor-graph compiler and RTL checks against NumPy reference outputs.</p>
+          <div class="project-tech">
+            <span>SystemVerilog</span><span>RISC-V</span><span>Icarus Verilog</span><span>Python</span>
+          </div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--green-dim);color:var(--green)">
+              <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/computer-systems-lab/tree/main/project-1-simd" target="_blank" rel="noopener noreferrer" title="View SIMD Performance Lab on GitHub" aria-label="View SIMD Performance Lab on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-systems">Computer Architecture</span>
+          <h3>SIMD Performance Lab</h3>
+          <p>Reproducible C experiments comparing scalar and SIMD kernels. Measures AXPY and dot-product performance across working-set sizes, with compiler evidence and correctness checks.</p>
+          <div class="project-tech">
+            <span>C</span><span>SIMD</span><span>GCC</span><span>Python</span>
+          </div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--green-dim);color:var(--green)">
+              <i class="fa-solid fa-memory" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/computer-systems-lab/tree/main/project-2-memory" target="_blank" rel="noopener noreferrer" title="View Cache &amp; Memory Lab on GitHub" aria-label="View Cache &amp; Memory Lab on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-systems">Memory Systems</span>
+          <h3>Cache &amp; Memory Lab</h3>
+          <p>Pointer-chasing and concurrent memory-traffic experiments exploring latency, contention, and page locality. Includes raw measurements, analysis scripts, and explanations of measurement limits.</p>
+          <div class="project-tech">
+            <span>C</span><span>Cache &amp; DRAM</span><span>Benchmarking</span><span>Python</span>
+          </div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--green-dim);color:var(--green)">
+              <i class="fa-solid fa-hard-drive" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/computer-systems-lab/tree/main/project-3-ssd" target="_blank" rel="noopener noreferrer" title="View SSD Performance Lab on GitHub" aria-label="View SSD Performance Lab on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-systems">Storage Systems</span>
+          <h3>SSD Performance Lab</h3>
+          <p>File-based fio experiments measuring storage throughput, IOPS, and latency across queue depths. Preserves configurations and raw results to make the measurements reproducible.</p>
+          <div class="project-tech">
+            <span>fio</span><span>Storage I/O</span><span>Python</span><span>Performance Analysis</span>
+          </div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--accent-dim);color:var(--accent)">
+              <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/hwbench" target="_blank" rel="noopener noreferrer" title="View hwbench: ML Inference Benchmarking on GitHub" aria-label="View hwbench: ML Inference Benchmarking on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-ml">ML / Performance</span>
+          <h3>hwbench: ML Inference Benchmarking</h3>
+          <p>A reproducible inference benchmark harness with latency percentiles, throughput, memory metrics, and saved environment details. CPU backend is working; CUDA validation and TTNN integration remain in progress.</p>
+          <div class="project-tech">
+            <span>Python</span><span>PyTorch</span><span>CPU Inference</span><span>Benchmarking</span>
+          </div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--purple-dim);color:var(--purple)">
+              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/tensix-field-guide" target="_blank" rel="noopener noreferrer" title="View Tensix Field Guide on GitHub" aria-label="View Tensix Field Guide on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-research">Architecture / Learning</span>
+          <h3>Tensix Field Guide</h3>
+          <p>A work-in-progress guide to Tenstorrent’s processor architecture, covering compute cores, local memory, data movement, and tiled execution. Connects plain-language explanations to primary technical sources.</p>
+          <div class="project-tech">
+            <span>Computer Architecture</span><span>Tensix</span><span>Technical Writing</span>
+          </div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--amber-dim);color:var(--amber)">
+              <i class="fa-solid fa-camera" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/PotholeDetectionAlgoSample" target="_blank" rel="noopener noreferrer" title="View Roadwatch: Pothole Detection on GitHub" aria-label="View Roadwatch: Pothole Detection on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-embedded">Embedded / Computer Vision</span>
+          <h3>Roadwatch: Pothole Detection</h3>
+          <p>Camera-based pothole and speed-bump detection with a YOLO training and inference pipeline. Supports model export to ONNX and NCNN for deployment on a Raspberry Pi.</p>
+          <div class="project-tech">
+            <span>Python</span><span>YOLO</span><span>ONNX</span><span>Raspberry Pi</span>
+          </div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--amber-dim);color:var(--amber)">
+              <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/BinaryAdderECSE1010" target="_blank" rel="noopener noreferrer" title="View 4-Bit Synchronous Counter on GitHub" aria-label="View 4-Bit Synchronous Counter on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-embedded">Digital Logic</span>
+          <h3>4-Bit Synchronous Counter</h3>
+          <p>A synchronous binary counter project with reset, enable, and rollover behavior. Includes Wokwi project documentation and a Tiny Tapeout workflow for exploring digital design.</p>
+          <div class="project-tech">
+            <span>Digital Logic</span><span>Wokwi</span><span>Tiny Tapeout</span>
+          </div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--purple-dim);color:var(--purple)">
+              <i class="fa-solid fa-temperature-half" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/sofc-thermal-simulator" target="_blank" rel="noopener noreferrer" title="View SOFC Thermal Management Simulator on GitHub" aria-label="View SOFC Thermal Management Simulator on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-research">Controls / Simulation</span>
+          <h3>SOFC Thermal Management Simulator</h3>
+          <p>Models a solid oxide fuel-cell stack with PID-controlled air flow. Compares controller tuning and load responses, with tests for thermal behavior, controller bounds, and simulation integration.</p>
+          <div class="project-tech">
+            <span>Python</span><span>PID Control</span><span>Matplotlib</span><span>pytest</span>
+          </div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon" style="background:var(--rose-dim);color:var(--rose)">
+              <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+            </div>
+            <div class="project-ext-links">
+              <a href="https://github.com/OrangeTangy/BlindManGame" target="_blank" rel="noopener noreferrer" title="View Blind &amp; Guide on GitHub" aria-label="View Blind &amp; Guide on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <span class="project-badge b-network">Interactive / Multiplayer</span>
+          <h3>Blind &amp; Guide</h3>
+          <p>A browser-based party game where one player sees the challenge and guides a partner through it. Uses shared game state, seeded rounds, and a server-authoritative multiplayer architecture.</p>
+          <div class="project-tech">
+            <span>TypeScript</span><span>React</span><span>Node.js</span><span>Socket.IO</span>
+          </div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div class="project-top">
             <div class="project-icon" style="background:var(--purple-dim);color:var(--purple)">
               <i class="fa-solid fa-bolt"></i>
             </div>
