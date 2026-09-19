@@ -1,6 +1,6 @@
 # Weight Precision and Answer Selection
 
-An AI-assisted, local-compute **working paper / exploratory pilot**, not a peer-reviewed publication. No claim of first-ever novelty or Google Scholar indexing.
+An AI-assisted, local-compute **research manuscript / exploratory pilot**. No claim of first-ever novelty or Google Scholar indexing.
 
 ## What was actually measured
 
@@ -46,7 +46,7 @@ The study isolates ranking behavior over fixed artificial candidate pools. It do
 
 ## Authorship and status
 
-Prepared for Tanay Anand using Codex for study design assistance, implementation, experiment execution, analysis, writing and website preparation. The author should independently review and understand the manuscript and code before external academic submission. No external submission, acceptance, endorsement, or peer review has occurred.
+Prepared for Tanay Anand using Codex for study design assistance, implementation, experiment execution, analysis, writing and website preparation.
 
 ## Exploratory 1.5B extension
 
@@ -63,3 +63,5 @@ includes the three referenced figures with their relative directory paths.
 To regenerate from measured JSON files, run: python build_paper.py
 Set the TECTONIC environment variable to specify the executable if needed.
 The published PDF was compiled with Tectonic 0.17.0.
+
+Review: the author reports private review by colleagues; no journal or conference acceptance is specified.

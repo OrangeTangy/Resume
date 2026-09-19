@@ -10,8 +10,8 @@
 \hypersetup{pdftitle={Weight Precision and Answer Selection: A Local Pilot with Small Language-Model Judges},pdfauthor={Tanay Anand}}
 \setlength{\emergencystretch}{2em}
 \title{Weight Precision and Answer Selection:\\A Local Pilot with Small Language-Model Judges}
-\author{Tanay Anand\\\small Independent project\\\small\url{https://tanayanand.me}}
-\date{19 September 2026\\\small Working paper v0.1; not peer reviewed}
+\author{Tanay Anand\\\small\url{https://tanayanand.me}}
+\date{19 September 2026}
 \begin{document}
 \maketitle
 \begin{abstract}Weight quantization reduces parameter storage, but its effect on answer selection need not be summarized by candidate-level classification accuracy. We report a controlled local pilot using Qwen2.5-0.5B-Instruct as a prompted arithmetic judge at native BF16, 8-bit and 4-bit weight precision. The experiment evaluates 120 constructed questions, with 40 used for threshold development and 80 held out; each contains 16 distinct integer answers with exactly one correct answer. At N=16, selected-answer accuracy is 13.8\% at native precision, 12.5\% at 8 bits, and 7.5\% at 4 bits. The 4-bit versus native paired difference is -6.2 percentage points, with a 95\% question-bootstrap interval of [-15.0, 1.2]. We additionally evaluate development-calibrated selective rescoring. Native 0.5B batching changes N=16 selections on 28.7\% of test questions, revealing substantial implementation sensitivity. A subsequent 1.5B same-family extension on the same questions yields N=16 accuracies of 28.7\% (native), 28.7\% (8-bit), and 20.0\% (4-bit). This study reports actual quantized-model inference over artificial answer pools, not generated reasoning traces. It establishes neither a general scaling law nor a novel state-of-the-art method.\end{abstract}
@@ -199,12 +199,12 @@ A stronger follow-up should use multiple trained verifier families and independe
 
 \section{Conclusion}
 
-Weight precision can be studied separately from answer generation by scoring identical candidate pools. This artifact supplies a transparent small-model test, a margin-rescoring baseline and a numerical control. It does not establish that quantization makes additional generation counterproductive, that a new method beats existing research, or that the findings generalize. Its appropriate status is an exploratory working paper awaiting broader validation and independent review.
+Weight precision can be studied separately from answer generation by scoring identical candidate pools. This artifact supplies a transparent small-model test, a margin-rescoring baseline and a numerical control. It does not establish that quantization makes additional generation counterproductive, that a new method beats existing research, or that the findings generalize. Broader validation across verifier families and independently generated candidate pools remains necessary.
 
 
-\section*{Authorship, assistance and publication status}
+\section*{Acknowledgments}
 
-Prepared for Tanay Anand with Codex assistance in research scoping, literature retrieval, implementation, local experiment execution, analysis, writing and website preparation. Independent author review and understanding are needed before academic submission. No journal or conference has accepted or reviewed this manuscript; no institutional endorsement is implied. The website release is a self-published working paper, not evidence of Google Scholar indexing.
+The manuscript received private review from colleagues. Codex assisted with research scoping, literature retrieval, implementation, local experiment execution, analysis, writing, and manuscript preparation.
 
 
 \bibliographystyle{unsrt}\bibliography{references}
