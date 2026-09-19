@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Tanay Anand — Student researcher and CS &amp; CSE student at RPI. RTL design, embedded firmware, and kernel optimization.">
   <title>Tanay Anand</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <style>
     :root {
@@ -26,12 +26,13 @@
       --rose-dim: rgba(251,113,133,.12);
       --amber: #fbbf24;
       --amber-dim: rgba(251,191,36,.12);
-      --text: #e2e8f0;
-      --text-secondary: #94a3b8;
-      --text-muted: #475569;
+      --text: #e6e9ef;
+      --text-secondary: #98a2b3;
+      --text-muted: #5b6472;
       --mono: 'JetBrains Mono', monospace;
       --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --radius: 10px;
+      --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --radius: 8px;
       --transition: .2s ease;
     }
 
@@ -154,22 +155,16 @@
       padding: 5rem 2.5rem;
     }
 
-    .section-label {
-      font-family: var(--mono);
-      font-size: .7rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      color: var(--accent);
-      margin-bottom: .5rem;
-    }
+    /* The old mono "eyebrow" label above each title read as template boilerplate. */
+    .section-label { display: none; }
 
     .section-title {
+      font-family: var(--serif);
       font-size: 2rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 2.5rem;
-      letter-spacing: -.02em;
+      font-weight: 500;
+      color: #f4f6fa;
+      margin-bottom: 2.25rem;
+      letter-spacing: -.01em;
     }
 
     .section-divider {
@@ -204,8 +199,7 @@
       width: 200px; height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid var(--border-hover);
-      box-shadow: 0 0 60px rgba(96,165,250,.06);
+      border: 1px solid var(--border-hover);
     }
 
     .hero-overline {
@@ -217,11 +211,12 @@
     }
 
     .hero-name {
-      font-size: 3.8rem;
-      font-weight: 900;
+      font-family: var(--serif);
+      font-size: 3.6rem;
+      font-weight: 500;
       line-height: 1.05;
-      letter-spacing: -.03em;
-      color: #fff;
+      letter-spacing: -.015em;
+      color: #f4f6fa;
       margin-bottom: 1.25rem;
     }
 
@@ -286,15 +281,14 @@
       box-shadow: 0 4px 24px rgba(0,0,0,.2);
     }
 
-    /* Featured card (Cisco) */
+    /* Most recent role gets a quiet left rule rather than a glow. */
     .exp-card.featured {
-      border-color: rgba(96,165,250,.2);
-      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(96,165,250,.04) 100%);
+      border-left: 2px solid var(--accent);
     }
 
     .exp-card.featured:hover {
-      border-color: rgba(96,165,250,.35);
-      box-shadow: 0 4px 30px rgba(96,165,250,.08);
+      border-color: var(--border-hover);
+      border-left-color: var(--accent);
     }
 
     .exp-header {
@@ -598,12 +592,15 @@
     /* ── Reveal ── */
     .reveal {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity .5s ease, transform .5s ease;
+      transform: translateY(8px);
+      transition: opacity .4s ease, transform .4s ease;
     }
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
     }
 
     /* ── Responsive ── */
@@ -633,8 +630,6 @@
 </head>
 <body>
 
-  <canvas id="particles-canvas"></canvas>
-
   <!-- ── Top Navbar ── -->
   <nav class="topnav">
     <a class="topnav-brand" href="#hero">
@@ -642,11 +637,11 @@
       <span class="topnav-name">Tanay Anand</span>
     </a>
     <ul class="topnav-links" id="navLinks">
+      <li><a href="#publications">Publications</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#research">Research</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
     </ul>
     <div class="topnav-right">
       <a class="topnav-icon" href="https://github.com/OrangeTangy" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -665,12 +660,14 @@
     <section class="hero" id="hero">
       <div class="hero-inner">
         <div class="hero-text">
-          <div class="hero-overline">CS &amp; Computer Systems Engineering @ RPI</div>
+          <div class="hero-overline">CS &amp; Computer Systems Engineering · RPI</div>
           <h1 class="hero-name">Tanay Anand</h1>
           <p class="hero-tagline">
-            Student researcher focused on kernel optimization for neural network
-            workloads. Building hardware and embedded systems, from RTL design
-            and verification to firmware and controls.
+            I'm an undergrad at RPI who likes working close to the hardware —
+            writing RTL for tensor accelerators, tightening kernels for neural-net
+            workloads, and building embedded systems from firmware up. Lately I've
+            been measuring how far you can push small models before the numbers stop
+            adding up.
           </p>
           <div class="hero-btns">
             <a class="btn btn-primary" href="mailto:tanayanand27@gmail.com">
@@ -692,10 +689,23 @@
 
     <hr class="section-divider">
 
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <h2 class="section-title reveal">Publications</h2>
+      <div class="project-card reveal" style="max-width:900px">
+        <span class="project-badge b-research">ML Systems / Exploratory Study</span>
+        <h3><a href="research/precision-selection/">Weight Precision and Answer Selection</a></h3>
+        <p>A local study of how 4-bit and 8-bit weight quantization changes arithmetic-answer selection in two small language-model judges. Includes measured results, uncertainty intervals, selective rescoring, a numerical control, and reproducible code and data.</p>
+        <p style="color:var(--amber);font-size:.85rem;margin-top:12px">Research manuscript · September 2026</p>
+        <div class="project-tech" style="margin-top:16px"><a href="research/precision-selection/">Research overview</a><a href="research/precision-selection/paper.pdf" style="margin-left:18px">Paper PDF</a><a href="research/precision-selection/research-artifact.zip" style="margin-left:18px">Code &amp; data</a></div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
     <!-- EXPERIENCE -->
     <section id="experience">
-      <div class="section-label">Experience</div>
-      <h2 class="section-title reveal">Where I've Worked</h2>
+      <h2 class="section-title reveal">Experience</h2>
 
       <div class="exp-list">
 
@@ -791,8 +801,7 @@
 
     <!-- EDUCATION -->
     <section id="education">
-      <div class="section-label">Education</div>
-      <h2 class="section-title reveal">Academic Background</h2>
+      <h2 class="section-title reveal">Education</h2>
 
       <div class="edu-grid">
         <div class="edu-card reveal">
@@ -815,8 +824,7 @@
 
     <!-- SKILLS -->
     <section id="skills">
-      <div class="section-label">Skills</div>
-      <h2 class="section-title reveal">Tech Stack</h2>
+      <h2 class="section-title reveal">Skills &amp; Tools</h2>
 
       <div class="skills-grid">
         <div class="skill-block s-blue reveal">
@@ -886,24 +894,9 @@
 
     <hr class="section-divider">
 
-    <!-- RESEARCH -->
-    <section id="research">
-      <div class="section-label">Research</div>
-      <h2 class="section-title reveal">Research Papers</h2>
-      <div class="project-card reveal" style="max-width:900px">
-        <span class="project-badge b-research">ML Systems / Exploratory Study</span>
-        <h3><a href="research/precision-selection/">Weight Precision and Answer Selection</a></h3>
-        <p>A local study of how 4-bit and 8-bit weight quantization changes arithmetic-answer selection in two small language-model judges. Includes measured results, uncertainty intervals, selective rescoring, a numerical control, and reproducible code and data.</p>
-        <p style="color:var(--amber);font-size:.85rem;margin-top:12px">Research manuscript · September 2026</p>
-        <div class="project-tech" style="margin-top:16px"><a href="research/precision-selection/">Research overview</a><a href="research/precision-selection/paper.pdf" style="margin-left:18px">Paper PDF</a><a href="research/precision-selection/research-artifact.zip" style="margin-left:18px">Code &amp; data</a></div>
-      </div>
-    </section>
-    <hr class="section-divider">
-
     <!-- PROJECTS -->
     <section id="projects">
-      <div class="section-label">Projects</div>
-      <h2 class="section-title reveal">Main Projects</h2>
+      <h2 class="section-title reveal">Selected Projects</h2>
 
       <div class="projects-grid">
 
@@ -1002,8 +995,7 @@
     <hr class="section-divider">
 
     <section id="other-projects">
-      <div class="section-label">More to Explore</div>
-      <h2 class="section-title reveal">Some Other Projects</h2>
+      <h2 class="section-title reveal">More Projects</h2>
       <div class="projects-grid">
 
         <div class="project-card reveal">
@@ -1268,66 +1260,6 @@
 
   </div>
 
-  <!-- Subtle particle background -->
-  <script>
-    (function () {
-      var c = document.getElementById('particles-canvas');
-      var ctx = c.getContext('2d');
-      var pts = [];
-      var mouse = { x: -999, y: -999 };
-
-      function resize() { c.width = window.innerWidth; c.height = window.innerHeight; }
-      resize();
-      window.addEventListener('resize', resize);
-      document.addEventListener('mousemove', function (e) { mouse.x = e.clientX; mouse.y = e.clientY; });
-
-      for (var i = 0; i < 50; i++) {
-        pts.push({
-          x: Math.random() * c.width, y: Math.random() * c.height,
-          vx: (Math.random() - .5) * .25, vy: (Math.random() - .5) * .25,
-          r: Math.random() * 1.2 + .4
-        });
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, c.width, c.height);
-        for (var i = 0; i < pts.length; i++) {
-          var p = pts[i];
-          p.x += p.vx; p.y += p.vy;
-          if (p.x < 0) p.x = c.width;
-          if (p.x > c.width) p.x = 0;
-          if (p.y < 0) p.y = c.height;
-          if (p.y > c.height) p.y = 0;
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(96,165,250,.2)';
-          ctx.fill();
-          for (var j = i + 1; j < pts.length; j++) {
-            var q = pts[j];
-            var dx = p.x - q.x, dy = p.y - q.y;
-            var d = Math.sqrt(dx * dx + dy * dy);
-            if (d < 130) {
-              ctx.beginPath();
-              ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y);
-              ctx.strokeStyle = 'rgba(96,165,250,' + (.04 * (1 - d / 130)) + ')';
-              ctx.stroke();
-            }
-          }
-          var mdx = p.x - mouse.x, mdy = p.y - mouse.y;
-          var md = Math.sqrt(mdx * mdx + mdy * mdy);
-          if (md < 160) {
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = 'rgba(96,165,250,' + (.08 * (1 - md / 160)) + ')';
-            ctx.stroke();
-          }
-        }
-        requestAnimationFrame(draw);
-      }
-      draw();
-    })();
-  </script>
-
   <!-- Scroll reveal -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -1336,10 +1268,7 @@
         var obs = new IntersectionObserver(function (entries) {
           entries.forEach(function (e) {
             if (e.isIntersecting) {
-              var delay = Array.prototype.indexOf.call(
-                e.target.parentElement.querySelectorAll('.reveal'), e.target
-              ) * 60;
-              setTimeout(function () { e.target.classList.add('visible'); }, delay);
+              e.target.classList.add('visible');
               obs.unobserve(e.target);
             }
           });
